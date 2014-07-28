@@ -1,4 +1,4 @@
-from flask import Flask, Response, abort, redirect, render_template, request
+from flask import Flask, render_template, request
 
 import geometry
 
