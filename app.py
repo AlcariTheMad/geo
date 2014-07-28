@@ -16,7 +16,6 @@ def root():
         x, m = geometry.cast(level, ranks, calc)
         if not x:
             x = 'failure'
-            m = ''
         return render_template('index.html', x=x, m=m)
 
 if __name__ == '__main__':

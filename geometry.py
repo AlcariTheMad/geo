@@ -28,7 +28,7 @@ def cast(level, ranks, calculating=False):
 	for x, m in tree:
 		if x in levels[level]:
 			return x, m
-	return None, None
+	return None, pool
 
 TRIALS = 10000
 
