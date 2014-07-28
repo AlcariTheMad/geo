@@ -1,0 +1,14 @@
+<html>
+<body>
+	<form id="cast" action="/" method="POST">
+		<p>Spell Level:<input type="text" name="level"></p>
+		<p>Skill Ranks:<input type="text" name="ranks"></p>
+		<p>Calculating Mind?<input type="checkbox" name="calc"></p>
+		<p><input type="submit" value="calculate"></p>
+	</form>
+{% if x %}
+Note: there's no order of operations below. Operations are performed in the order they are shown.
+<p>{{ m }} = {{ x }}</p>
+{% endif %}
+</body>
+</html>
