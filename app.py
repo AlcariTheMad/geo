@@ -5,9 +5,10 @@ import geometry
 app = Flask('geometry')
 
 @app.route('/', methods=['GET', 'POST'])
+@app.route('/geo/', methods=['GET', 'POST'])
 def root():
     if request.method == 'GET':
-        return render_template('index.html')
+        return render_template('index.html', url=request.path)
     elif request.method == 'POST':
         level = int(request.form.get('level'))
         ranks = int(request.form.get('ranks'))

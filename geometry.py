@@ -14,6 +14,11 @@ levels = [
 	[71, 73, 79],
 	[83, 89, 97],
 	[101, 103, 107],
+	[109, 113, 127], # extrapolated 10th+ spell level
+	[131, 137, 139],
+	[149, 151, 157],
+	[163, 167, 173],
+	[179, 181, 191],
 ]
 
 def cast(level, ranks, calculating=False):
