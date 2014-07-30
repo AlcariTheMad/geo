@@ -63,12 +63,12 @@ class MathTree(object):
 			self.add = MathTree(x+l[0], l[1:], m+' + {0}'.format(l[0]))
 			self.sub = MathTree(x-l[0], l[1:], m+' - {0}'.format(l[0]))
 			self.mul = MathTree(x*l[0], l[1:], m+' * {0}'.format(l[0]))
-			self.div = MathTree(x/l[0], l[1:], m+' / {0}'.format(l[0]))
+			self.div = MathTree(float(x)/l[0], l[1:], m+' / {0}'.format(l[0]))
 		else:
 			self.add = MathLeaf(x+l[0], m+' + {0}'.format(l[0]))
 			self.sub = MathLeaf(x-l[0], m+' - {0}'.format(l[0]))
 			self.mul = MathLeaf(x*l[0], m+' * {0}'.format(l[0]))
-			self.div = MathLeaf(x/l[0], m+' / {0}'.format(l[0]))
+			self.div = MathLeaf(float(x)/l[0], m+' / {0}'.format(l[0]))
 	def __iter__(self):
 		self.build_tree()
 		for node in [self.add, self.sub, self.mul, self.div]:
@@ -90,7 +90,7 @@ if __name__ == '__main__':
 	if x:
 		print 'success!', m, '=', x
 	else:
-		print 'failure'
+		print 'failure', m
 
 
 
